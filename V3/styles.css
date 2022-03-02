@@ -1,0 +1,32 @@
+body {
+    font-family: monospace;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    height: 100vh;
+}
+
+.typing {
+    width: 23ch;
+    overflow: hidden;
+    border-right: 3.5px solid green;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+        type-text 4s steps(23),
+        blinking .5s step-end infinite alternate;
+}
+
+@keyframes type-text {
+    from { width: 0}
+    }
+
+@keyframes blinking {
+        from, to { border-color: transparent }
+        50% {border-color: green}
+    }
